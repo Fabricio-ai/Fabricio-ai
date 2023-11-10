@@ -1,71 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  .container {
-    text-align: center;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vamos viajar o mundo e casar na Roma</title>
+  <style>
+    body {
+      text-align: center;
+    }
 
-  .title {
-    font-size: 24px;
-    margin-top: 20px;
-  }
+    .title {
+      font-size: 24px;
+      margin-top: 20px;
+    }
 
-  .box {
-    border: 2px solid #000;
-    padding: 10px;
-    text-align: center;
-    width: 300px;
-    margin: 10px;
-    cursor: pointer;
-    position: absolute;
-  }
+    .box {
+      border: 2px solid #000;
+      padding: 10px;
+      text-align: center;
+      width: 300px;
+      margin: 10px;
+      cursor: pointer;
+      position: absolute;
+    }
 
-  .hidden {
-    display: none;
-  }
+    #sim {
+      top: 100px;
+      left: 50px;
+    }
 
-  #sim {
-    top: 100px;
-    left: 50px;
-  }
+    #nao {
+      top: 200px;
+      left: 50px;
+    }
 
-  #nao {
-    top: 200px;
-    left: 50px;
-  }
+    #mensagem2 {
+      top: 200px;
+      left: 50px;
+      display: none;
+    }
 
-  #mensagem2 {
-    top: 200px;
-    left: 50px;
-  }
-
-  #mensagem3 {
-    top: 200px;
-    left: 50px;
-  }
-</style>
+    #mensagem3 {
+      top: 200px;
+      left: 50px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <p class="title">Vamos viajar o mundo e casar na Roma</p>
-    <div class="box" id="sim" onclick="redirecionar()">
-      <p>Sim</p>
-    </div>
-    <div class="box" id="nao" onclick="mostrarMensagem()">
-      <p>Não</p>
-    </div>
-    <div class="box hidden" id="mensagem2" onclick="mostrarMensagem3()">
-      <p>Tem certeza?</p>
-    </div>
-    <div class="box hidden" id="mensagem3" onclick="escaparCaixa()">
-      <p>Então me pegue!</p>
-    </div>
+  <div class="title">Vamos viajar o mundo e casar na Roma</div>
+  <div class="box" id="sim" onclick="redirecionar()">
+    <p>Sim</p>
+  </div>
+  <div class="box" id="nao" onclick="mostrarMensagem()">
+    <p>Não</p>
+  </div>
+  <div class="box" id="mensagem2" onclick="mostrarMensagem3()">
+    <p>Tem certeza?</p>
+  </div>
+  <div class="box" id="mensagem3" onclick="escaparCaixa()">
+    <p>Então me pegue!</p>
   </div>
 
   <script>
-    var contadorCliques = 0;
-
     function redirecionar() {
       window.location.href = "https://i.pinimg.com/originals/25/6a/31/256a319f34cfc8afa1ff27e181b27a0d.gif";
     }
@@ -76,11 +73,6 @@
 
       naoCaixa.style.display = 'none';
       mensagem2Caixa.style.display = 'block';
-      contadorCliques++;
-      
-      if (contadorCliques === 2) {
-        mensagem2Caixa.innerHTML = "Tente me pegar";
-      }
     }
 
     function mostrarMensagem3() {
@@ -92,6 +84,7 @@
 
       caixa.style.left = newX + 'px';
       caixa.style.top = newY + 'px';
+
       caixa.style.display = 'block';
     }
 
@@ -108,3 +101,4 @@
   </script>
 </body>
 </html>
+
